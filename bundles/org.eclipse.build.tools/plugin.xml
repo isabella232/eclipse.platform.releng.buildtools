@@ -16,7 +16,12 @@
    </extension>
 	<!-- Tasks -->
    <extension point="org.eclipse.ant.core.antTasks">
-        <antTask
+      <antTask
+            library="buildTools.jar"
+            name="generateTestProperties"
+            class="org.eclipse.releng.generators.TestVersionTracker">
+      </antTask>
+      <antTask
             library="buildTools.jar"
             name="verifyCompile"
             class="org.eclipse.releng.CompileErrorCheck">
